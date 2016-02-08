@@ -28,33 +28,36 @@ public final class CollectionVariable<T> {
     
     // MARK: - Attributes
     
-    private let _changesSubject: BehaviorSubject<CollectionChange<T>>
-    private let _subject: BehaviorSubject<[T]>
+    private let _changesSubject: PublishSubject<CollectionChange<T>>
+    private let _subject: PublishSubject<[T]>
     private var _lock = NSRecursiveLock()
     public var observable: Observable<[T]> { return _subject.asObservable() }
     public var changesObservable: Observable<CollectionChange<T>> { return _changesSubject.asObservable() }
-    private var _value: [T] {
+    private var _value: [T]
+    public var value: [T] {
         get {
-            _lock.lock(); defer { _lock.unlock() }
-            return self._value
+            return _value
         }
-        set(newValue) {
-            _lock.lock()
-            self._value = newValue
-            _lock.unlock()
+        set {
+            _value = newValue
+            _subject.onNext(newValue)
+            _changesSubject.onNext(.Composite(newValue.mapWithIndex{CollectionChange.Insert($0, $1)}))
         }
     }
 
     
     // MARK: - Init
     
-    public init(value: [T]) {
+    public init(_ value: [T]) {
         var initialChanges: [CollectionChange<T>] = []
         for (index, element) in value.enumerate() {
             initialChanges.append(.Insert(index, element))
         }
-        _changesSubject = BehaviorSubject(value: .Composite(initialChanges))
-        _subject = BehaviorSubject(value: value)
+        _value = value
+        _changesSubject = PublishSubject()
+        _changesSubject.onNext(.Composite(initialChanges))
+        _subject = PublishSubject()
+        _subject.onNext(value)
     }
     
     
