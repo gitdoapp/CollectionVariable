@@ -17,11 +17,11 @@ class CollectionVariableTests: QuickSpec {
                 expect(property.value) == array
             }
         }
-        
+
         describe("updates") {
-            
+
             context("full update") {
-                
+
                 it("should notify the main observable") {
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -36,7 +36,7 @@ class CollectionVariableTests: QuickSpec {
                         variable.value = ["test2", "test3"]
                     })
                 }
-                
+
                 it("should notify the changes observable with the replaced enum type") {
                     let array: [String] = ["test1", "test2"]
                     let newArray: [String] = ["test2", "test3"]
@@ -62,7 +62,7 @@ class CollectionVariableTests: QuickSpec {
                     })
                 }
             }
-            
+
         }
 
         describe("deletion") {
@@ -108,9 +108,9 @@ class CollectionVariableTests: QuickSpec {
                     })
                 }
             }
-            
+
             context("deleting the last element", {
-                
+
                 it("should notify the deletion to the main observable") {
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -126,7 +126,7 @@ class CollectionVariableTests: QuickSpec {
                         variable.removeLast()
                     })
                 }
-                
+
                 it("should notify the deletion to the changes observable with the right type") {
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -147,9 +147,9 @@ class CollectionVariableTests: QuickSpec {
                         variable.removeLast()
                     })
                 }
-                
+
             })
-            
+
             context("deleting the first element", {
                 it("should notify the deletion to the main observable") {
                     let array: [String] = ["test1", "test2"]
@@ -166,7 +166,7 @@ class CollectionVariableTests: QuickSpec {
                         variable.removeFirst()
                     })
                 }
-                
+
                 it("should notify the deletion to the changes observable with the right type") {
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -188,7 +188,7 @@ class CollectionVariableTests: QuickSpec {
                     })
                 }
             })
-            
+
             context("remove all elements", {
                 it("should notify the deletion to the main observable") {
                     let array: [String] = ["test1", "test2"]
@@ -205,7 +205,7 @@ class CollectionVariableTests: QuickSpec {
                         variable.removeAll()
                     })
                 }
-                
+
                 it("should notify the deletion to the changes observable with the right type") {
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -231,11 +231,11 @@ class CollectionVariableTests: QuickSpec {
             })
 
         }
-        
+
         context("adding elements") { () -> Void in
-            
+
             context("appending elements individually", { () -> Void in
-                
+
                 it("should notify about the change to the main observable", closure: { () -> () in
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -251,7 +251,7 @@ class CollectionVariableTests: QuickSpec {
                         variable.append("test3")
                     })
                 })
-                
+
                 it("should notify the changes observable about the adition", closure: { () -> () in
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -272,11 +272,11 @@ class CollectionVariableTests: QuickSpec {
                         variable.append("test3")
                     })
                 })
-                
+
             })
-            
+
             context("appending elements from another array", { () -> Void in
-                
+
                 it("should notify about the change to the main observable", closure: { () -> () in
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -292,7 +292,7 @@ class CollectionVariableTests: QuickSpec {
                         variable.appendContentsOf(["test3", "test4"])
                     })
                 })
-                
+
                 it("should notify the changes observable about the adition", closure: { () -> () in
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -315,11 +315,11 @@ class CollectionVariableTests: QuickSpec {
                         variable.appendContentsOf(["test3", "test4"])
                     })
                 })
-                
+
             })
-            
+
             context("inserting elements", { () -> Void in
-                
+
                 it("should notify about the change to the main observable", closure: { () -> () in
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -335,7 +335,7 @@ class CollectionVariableTests: QuickSpec {
                         variable.insert("test0", atIndex: 0)
                     })
                 })
-                
+
                 it("should notify the changes observable about the adition", closure: { () -> () in
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -356,11 +356,11 @@ class CollectionVariableTests: QuickSpec {
                         variable.insert("test0", atIndex: 0)
                     })
                 })
-                
+
             })
-            
+
             context("replacing elements", { () -> Void in
-                
+
                 it("should notify about the change to the main observable", closure: { () -> () in
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -376,7 +376,7 @@ class CollectionVariableTests: QuickSpec {
                         variable.replace(Range<Int>(start: 0, end: 1), with: ["test3", "test4"])
                     })
                 })
-                
+
                 it("should notify the changes producer about the adition", closure: { () -> () in
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
@@ -397,11 +397,11 @@ class CollectionVariableTests: QuickSpec {
                         })
                         variable.replace(Range<Int>(start: 0, end: 1), with: ["test3", "test4"])
                     })
-                    
+
                 })
-                
+
             })
-            
+
         }
 
     }
