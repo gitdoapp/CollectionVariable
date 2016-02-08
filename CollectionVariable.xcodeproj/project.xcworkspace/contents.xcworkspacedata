@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MutableCollectionProperty.xcodeproj">
+      location = "self:/Users/pedropinerabuendia/code/CollectionVariable/CollectionVariable.xcodeproj">
    </FileRef>
 </Workspace>

@@ -7,20 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23AE4B291BCE5CF100D1082B /* MutableCollectionProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 23AE4B281BCE5CF100D1082B /* MutableCollectionProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23AE4B301BCE5CF100D1082B /* MutableCollectionProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AE4B251BCE5CF100D1082B /* MutableCollectionProperty.framework */; };
+		239776901C688C18001D0FFF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2397768D1C688C18001D0FFF /* Info.plist */; };
+		239776911C688C18001D0FFF /* CollectionVariable.h in Headers */ = {isa = PBXBuildFile; fileRef = 2397768E1C688C18001D0FFF /* CollectionVariable.h */; };
+		23AE4B301BCE5CF100D1082B /* CollectionVariable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AE4B251BCE5CF100D1082B /* CollectionVariable.framework */; };
 		23AE4B351BCE5CF100D1082B /* MutableCollectionPropertyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4B341BCE5CF100D1082B /* MutableCollectionPropertyTests.swift */; };
-		23AE4B431BCE5D9E00D1082B /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AE4B401BCE5D9E00D1082B /* ReactiveCocoa.framework */; };
-		23AE4B441BCE5D9E00D1082B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AE4B411BCE5D9E00D1082B /* Result.framework */; };
-		23AE4B461BCE5DAF00D1082B /* MutableCollectionProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AE4B451BCE5DAF00D1082B /* MutableCollectionProperty.swift */; };
 		23B531A51BCF7E96006656E3 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B531A31BCF7E96006656E3 /* Nimble.framework */; };
 		23B531A61BCF7E96006656E3 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23B531A41BCF7E96006656E3 /* Quick.framework */; };
 		23B531A91BCF7EE9006656E3 /* Nimble.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 23B531A31BCF7E96006656E3 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23B531AA1BCF7EE9006656E3 /* Quick.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 23B531A41BCF7E96006656E3 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		23B531AD1BCF87B6006656E3 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AE4B401BCE5D9E00D1082B /* ReactiveCocoa.framework */; };
-		23B531AE1BCF87C9006656E3 /* ReactiveCocoa.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 23AE4B401BCE5D9E00D1082B /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		23B531AF1BCF87CD006656E3 /* Result.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 23AE4B411BCE5D9E00D1082B /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		23B531B01BCF87D2006656E3 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23AE4B411BCE5D9E00D1082B /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +34,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				23B531AF1BCF87CD006656E3 /* Result.framework in Copy Frameworks */,
-				23B531AE1BCF87C9006656E3 /* ReactiveCocoa.framework in Copy Frameworks */,
 				23B531A91BCF7EE9006656E3 /* Nimble.framework in Copy Frameworks */,
 				23B531AA1BCF7EE9006656E3 /* Quick.framework in Copy Frameworks */,
 			);
@@ -51,15 +43,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		23AE4B251BCE5CF100D1082B /* MutableCollectionProperty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MutableCollectionProperty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23AE4B281BCE5CF100D1082B /* MutableCollectionProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MutableCollectionProperty.h; sourceTree = "<group>"; };
-		23AE4B2A1BCE5CF100D1082B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23AE4B2F1BCE5CF100D1082B /* MutableCollectionPropertyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MutableCollectionPropertyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2397768D1C688C18001D0FFF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2397768E1C688C18001D0FFF /* CollectionVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionVariable.h; sourceTree = "<group>"; };
+		2397768F1C688C18001D0FFF /* CollectionVariable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionVariable.swift; sourceTree = "<group>"; };
+		23AE4B251BCE5CF100D1082B /* CollectionVariable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionVariable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23AE4B2F1BCE5CF100D1082B /* CollectionVariable.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionVariable.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23AE4B341BCE5CF100D1082B /* MutableCollectionPropertyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutableCollectionPropertyTests.swift; sourceTree = "<group>"; };
 		23AE4B361BCE5CF100D1082B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23AE4B401BCE5D9E00D1082B /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		23AE4B411BCE5D9E00D1082B /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		23AE4B451BCE5DAF00D1082B /* MutableCollectionProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutableCollectionProperty.swift; sourceTree = "<group>"; };
 		23B531A31BCF7E96006656E3 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		23B531A41BCF7E96006656E3 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,8 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23AE4B431BCE5D9E00D1082B /* ReactiveCocoa.framework in Frameworks */,
-				23AE4B441BCE5D9E00D1082B /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,22 +68,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23AE4B301BCE5CF100D1082B /* MutableCollectionProperty.framework in Frameworks */,
+				23AE4B301BCE5CF100D1082B /* CollectionVariable.framework in Frameworks */,
 				23B531A51BCF7E96006656E3 /* Nimble.framework in Frameworks */,
-				23B531AD1BCF87B6006656E3 /* ReactiveCocoa.framework in Frameworks */,
 				23B531A61BCF7E96006656E3 /* Quick.framework in Frameworks */,
-				23B531B01BCF87D2006656E3 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2397768C1C688C18001D0FFF /* CollectionVariable */ = {
+			isa = PBXGroup;
+			children = (
+				2397768D1C688C18001D0FFF /* Info.plist */,
+				2397768E1C688C18001D0FFF /* CollectionVariable.h */,
+				2397768F1C688C18001D0FFF /* CollectionVariable.swift */,
+			);
+			path = CollectionVariable;
+			sourceTree = "<group>";
+		};
 		23AE4B1B1BCE5CF100D1082B = {
 			isa = PBXGroup;
 			children = (
+				2397768C1C688C18001D0FFF /* CollectionVariable */,
 				23AE4B471BCE5DB900D1082B /* Frameworks */,
-				23AE4B271BCE5CF100D1082B /* MutableCollectionProperty */,
 				23AE4B331BCE5CF100D1082B /* MutableCollectionPropertyTests */,
 				23AE4B261BCE5CF100D1082B /* Products */,
 			);
@@ -102,20 +100,10 @@
 		23AE4B261BCE5CF100D1082B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23AE4B251BCE5CF100D1082B /* MutableCollectionProperty.framework */,
-				23AE4B2F1BCE5CF100D1082B /* MutableCollectionPropertyTests.xctest */,
+				23AE4B251BCE5CF100D1082B /* CollectionVariable.framework */,
+				23AE4B2F1BCE5CF100D1082B /* CollectionVariable.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		23AE4B271BCE5CF100D1082B /* MutableCollectionProperty */ = {
-			isa = PBXGroup;
-			children = (
-				23AE4B281BCE5CF100D1082B /* MutableCollectionProperty.h */,
-				23AE4B2A1BCE5CF100D1082B /* Info.plist */,
-				23AE4B451BCE5DAF00D1082B /* MutableCollectionProperty.swift */,
-			);
-			path = MutableCollectionProperty;
 			sourceTree = "<group>";
 		};
 		23AE4B331BCE5CF100D1082B /* MutableCollectionPropertyTests */ = {
@@ -145,16 +133,16 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23AE4B291BCE5CF100D1082B /* MutableCollectionProperty.h in Headers */,
+				239776911C688C18001D0FFF /* CollectionVariable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		23AE4B241BCE5CF100D1082B /* MutableCollectionProperty */ = {
+		23AE4B241BCE5CF100D1082B /* CollectionVariable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23AE4B391BCE5CF100D1082B /* Build configuration list for PBXNativeTarget "MutableCollectionProperty" */;
+			buildConfigurationList = 23AE4B391BCE5CF100D1082B /* Build configuration list for PBXNativeTarget "CollectionVariable" */;
 			buildPhases = (
 				23AE4B201BCE5CF100D1082B /* Sources */,
 				23AE4B211BCE5CF100D1082B /* Frameworks */,
@@ -165,14 +153,14 @@
 			);
 			dependencies = (
 			);
-			name = MutableCollectionProperty;
+			name = CollectionVariable;
 			productName = MutableCollectionProperty;
-			productReference = 23AE4B251BCE5CF100D1082B /* MutableCollectionProperty.framework */;
+			productReference = 23AE4B251BCE5CF100D1082B /* CollectionVariable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		23AE4B2E1BCE5CF100D1082B /* MutableCollectionPropertyTests */ = {
+		23AE4B2E1BCE5CF100D1082B /* CollectionVariableTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23AE4B3C1BCE5CF100D1082B /* Build configuration list for PBXNativeTarget "MutableCollectionPropertyTests" */;
+			buildConfigurationList = 23AE4B3C1BCE5CF100D1082B /* Build configuration list for PBXNativeTarget "CollectionVariableTests" */;
 			buildPhases = (
 				23AE4B2B1BCE5CF100D1082B /* Sources */,
 				23AE4B2C1BCE5CF100D1082B /* Frameworks */,
@@ -184,9 +172,9 @@
 			dependencies = (
 				23AE4B321BCE5CF100D1082B /* PBXTargetDependency */,
 			);
-			name = MutableCollectionPropertyTests;
+			name = CollectionVariableTests;
 			productName = MutableCollectionPropertyTests;
-			productReference = 23AE4B2F1BCE5CF100D1082B /* MutableCollectionPropertyTests.xctest */;
+			productReference = 23AE4B2F1BCE5CF100D1082B /* CollectionVariable.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -207,7 +195,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 23AE4B1F1BCE5CF100D1082B /* Build configuration list for PBXProject "MutableCollectionProperty" */;
+			buildConfigurationList = 23AE4B1F1BCE5CF100D1082B /* Build configuration list for PBXProject "CollectionVariable" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -219,8 +207,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23AE4B241BCE5CF100D1082B /* MutableCollectionProperty */,
-				23AE4B2E1BCE5CF100D1082B /* MutableCollectionPropertyTests */,
+				23AE4B241BCE5CF100D1082B /* CollectionVariable */,
+				23AE4B2E1BCE5CF100D1082B /* CollectionVariableTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239776901C688C18001D0FFF /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23AE4B461BCE5DAF00D1082B /* MutableCollectionProperty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +252,7 @@
 /* Begin PBXTargetDependency section */
 		23AE4B321BCE5CF100D1082B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 23AE4B241BCE5CF100D1082B /* MutableCollectionProperty */;
+			target = 23AE4B241BCE5CF100D1082B /* CollectionVariable */;
 			targetProxy = 23AE4B311BCE5CF100D1082B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -371,12 +359,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MutableCollectionProperty/Info.plist;
+				INFOPLIST_FILE = CollectionVariable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.MutableCollectionProperty;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.CollectionVariable;
+				PRODUCT_NAME = CollectionVariable;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -394,12 +382,12 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MutableCollectionProperty/Info.plist;
+				INFOPLIST_FILE = CollectionVariable/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.MutableCollectionProperty;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.CollectionVariable;
+				PRODUCT_NAME = CollectionVariable;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -411,10 +399,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MutableCollectionPropertyTests/Info.plist;
+				INFOPLIST_FILE = CollectionVariableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.MutableCollectionPropertyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.CollectionVariableTests;
+				PRODUCT_NAME = CollectionVariable;
 			};
 			name = Debug;
 		};
@@ -425,17 +413,17 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = MutableCollectionPropertyTests/Info.plist;
+				INFOPLIST_FILE = CollectionVariableTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.MutableCollectionPropertyTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.CollectionVariableTests;
+				PRODUCT_NAME = CollectionVariable;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		23AE4B1F1BCE5CF100D1082B /* Build configuration list for PBXProject "MutableCollectionProperty" */ = {
+		23AE4B1F1BCE5CF100D1082B /* Build configuration list for PBXProject "CollectionVariable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23AE4B371BCE5CF100D1082B /* Debug */,
@@ -444,7 +432,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23AE4B391BCE5CF100D1082B /* Build configuration list for PBXNativeTarget "MutableCollectionProperty" */ = {
+		23AE4B391BCE5CF100D1082B /* Build configuration list for PBXNativeTarget "CollectionVariable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23AE4B3A1BCE5CF100D1082B /* Debug */,
@@ -453,7 +441,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23AE4B3C1BCE5CF100D1082B /* Build configuration list for PBXNativeTarget "MutableCollectionPropertyTests" */ = {
+		23AE4B3C1BCE5CF100D1082B /* Build configuration list for PBXNativeTarget "CollectionVariableTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23AE4B3D1BCE5CF100D1082B /* Debug */,

@@ -1,7 +1,7 @@
-# RAC-MutableCollectionProperty
-[![Build Status](https://travis-ci.org/gitdoapp/RAC-MutableCollectionProperty.svg)](https://travis-ci.org/gitdoapp/RAC-MutableCollectionProperty)
+# CollectionVariable
+[![Build Status](https://travis-ci.org/gitdoapp/CollectionVariable.svg)](https://travis-ci.org/gitdoapp/CollectionVariable)
 
-Implementation of the concept of MutableCollectionProperty for ReactiveCocoa (Swift)
+Implementation of the concept of CollectionVariable for RxSwift
 
 *Implemented by [@pepibumur](https://github.com/pepibumur)*
 
@@ -10,11 +10,11 @@ Implementation of the concept of MutableCollectionProperty for ReactiveCocoa (Sw
 - Granularity reporting collection changes (custom events)
 - It exposes Swift Array collection methods
 - NSFetchedResultsController inspired
-- ReactiveCocoa 4.XX
+- RxSwift 2.1.X
 
 ## How to install
 1. Get [Carthage](https://github.com/Carthage/Carthage), `brew update carthage`
-2. Add the line `github "gitdoapp/RAC-MutableCollectionProperty"` to your `Cartfile`
+2. Add the line `github "gitdoapp/CollectionVariable"` to your `Cartfile`
 3. Execute `carthage update`
 4. Add the Carthage generated frameworks to your project following the steps [here](https://github.com/Carthage/Carthage).
 

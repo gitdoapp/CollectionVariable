@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "23AE4B241BCE5CF100D1082B"
-               BuildableName = "MutableCollectionProperty.framework"
-               BlueprintName = "MutableCollectionProperty"
-               ReferencedContainer = "container:MutableCollectionProperty.xcodeproj">
+               BuildableName = "CollectionVariable.framework"
+               BlueprintName = "CollectionVariable"
+               ReferencedContainer = "container:CollectionVariable.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "23AE4B2E1BCE5CF100D1082B"
-               BuildableName = "MutableCollectionPropertyTests.xctest"
-               BlueprintName = "MutableCollectionPropertyTests"
-               ReferencedContainer = "container:MutableCollectionProperty.xcodeproj">
+               BuildableName = "CollectionVariable.xctest"
+               BlueprintName = "CollectionVariableTests"
+               ReferencedContainer = "container:CollectionVariable.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23AE4B241BCE5CF100D1082B"
-            BuildableName = "MutableCollectionProperty.framework"
-            BlueprintName = "MutableCollectionProperty"
-            ReferencedContainer = "container:MutableCollectionProperty.xcodeproj">
+            BuildableName = "CollectionVariable.framework"
+            BlueprintName = "CollectionVariable"
+            ReferencedContainer = "container:CollectionVariable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23AE4B241BCE5CF100D1082B"
-            BuildableName = "MutableCollectionProperty.framework"
-            BlueprintName = "MutableCollectionProperty"
-            ReferencedContainer = "container:MutableCollectionProperty.xcodeproj">
+            BuildableName = "CollectionVariable.framework"
+            BlueprintName = "CollectionVariable"
+            ReferencedContainer = "container:CollectionVariable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23AE4B241BCE5CF100D1082B"
-            BuildableName = "MutableCollectionProperty.framework"
-            BlueprintName = "MutableCollectionProperty"
-            ReferencedContainer = "container:MutableCollectionProperty.xcodeproj">
+            BuildableName = "CollectionVariable.framework"
+            BlueprintName = "CollectionVariable"
+            ReferencedContainer = "container:CollectionVariable.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
