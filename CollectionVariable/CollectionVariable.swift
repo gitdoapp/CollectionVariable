@@ -127,16 +127,17 @@ public final class CollectionVariable<T> {
     public func replace(subRange: Range<Int>, with elements: [T]) {
         _lock.lock()
         precondition(subRange.startIndex + subRange.count <= _value.count, "Range out of bounds")
-        var insertsComposite: [CollectionChange<T>] = []
-        var deletesComposite: [CollectionChange<T>] = []
+        
+        var compositeChanges: [CollectionChange<T>] = []
+        
         for (index, element) in elements.enumerate() {
             let replacedElement = _value[subRange.startIndex+index]
-            _value.replaceRange(Range<Int>(start: subRange.startIndex+index, end: subRange.startIndex+index+1), with: [element])
-            deletesComposite.append(.Remove(subRange.startIndex + index, replacedElement))
-            insertsComposite.append(.Insert(subRange.startIndex + index, element))
+            let range = subRange.startIndex+index..<subRange.startIndex+index+1
+            _value.replaceRange(range, with: [element])
+            compositeChanges.append(.Remove(subRange.startIndex + index, replacedElement))
+            compositeChanges.append(.Insert(subRange.startIndex + index, element))
         }
-        _changesSubject.onNext(.Composite(deletesComposite))
-        _changesSubject.onNext(.Composite(insertsComposite))
+        _changesSubject.onNext(.Composite(compositeChanges))
         _subject.onNext(_value)
         _lock.unlock()
     }
