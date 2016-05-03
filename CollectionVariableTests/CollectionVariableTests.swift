@@ -381,25 +381,15 @@ class CollectionVariableTests: QuickSpec {
                     let array: [String] = ["test1", "test2"]
                     let variable: CollectionVariable<String> = CollectionVariable(array)
                     waitUntil(action: { (done) -> Void in
-                        var i: Int = 0
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
                             case .Next(let change):
                                 switch change {
                                 case .Composite(let changes):
-                                    if i == 0 { // Removal
-                                        let indexes = changes.map({$0.index()!})
-                                        let elements = changes.map({$0.element()!})
-                                        expect(indexes) == [0, 1]
-                                        expect(elements) == ["test1", "test2"]
-                                    }
-                                    else { // Insertion
-                                        let indexes = changes.map({$0.index()!})
-                                        let elements = changes.map({$0.element()!})
-                                        expect(indexes) == [0, 1]
-                                        expect(elements) == ["test3", "test4"]
-                                        done()
-                                    }
+                                    let indexes = changes.map({$0.index()!})
+                                    let elements = changes.map({$0.element()!})
+                                    expect(indexes) == [0, 0, 1, 1]
+                                    expect(elements) == ["test1", "test3", "test2", "test4"]
                                 default: break
                                 }
                             default: break
