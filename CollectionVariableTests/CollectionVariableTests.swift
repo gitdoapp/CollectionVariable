@@ -394,7 +394,6 @@ class CollectionVariableTests: QuickSpec {
                                 }
                             default: break
                             }
-                            i++
                         })
                         variable.replace(Range<Int>(start: 0, end: 1), with: ["test3", "test4"])
                     })
