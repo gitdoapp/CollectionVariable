@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "CollectionVariable"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "CollectionVariable for RxSwift"
   s.homepage         = "https://github.com/gitdoapp/CollectionVariable"
   s.license          = 'MIT'
