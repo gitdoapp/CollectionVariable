@@ -19,20 +19,20 @@ Implementation of the concept of CollectionVariable for RxSwift
 4. Add the Carthage generated frameworks to your project following the steps [here](https://github.com/Carthage/Carthage).
 
 ## How to use it
-1. Create your property of type `MutableCollectionProperty`
+1. Create your property of type `CollectionVariable`
 
 ```swift
-let property: MutableCollectionProperty<String> = MutableCollectionProperty(["test1", "test2"])
+let variable: CollectionVariable<String> = CollectionVariable(["test1", "test2"])
 ```
 
 2. Use the property available subscribers:
 
 ```swift
-property.producer.startWithNext { newCollection in
+variable.observable.subscribeNext { newCollection in
   // Do whatever you want with the new collection
   // e.g. tableView.reloadData()
 }
-property.changesProducer.startWithNext { change in
+variable.changesObservable.subscribeNext { change in
   switch change {
     case Remove(Int, T)
     case Insert(Int, T)

@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "23AE4B2E1BCE5CF100D1082B"
-               BuildableName = "CollectionVariable.xctest"
+               BuildableName = "CollectionVariableTests.xctest"
                BlueprintName = "CollectionVariableTests"
                ReferencedContainer = "container:CollectionVariable.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "23AE4B2E1BCE5CF100D1082B"
-               BuildableName = "CollectionVariable.xctest"
+               BuildableName = "CollectionVariableTests.xctest"
                BlueprintName = "CollectionVariableTests"
                ReferencedContainer = "container:CollectionVariable.xcodeproj">
             </BuildableReference>
@@ -55,7 +55,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23AE4B2E1BCE5CF100D1082B"
-            BuildableName = "CollectionVariable.xctest"
+            BuildableName = "CollectionVariableTests.xctest"
             BlueprintName = "CollectionVariableTests"
             ReferencedContainer = "container:CollectionVariable.xcodeproj">
          </BuildableReference>
