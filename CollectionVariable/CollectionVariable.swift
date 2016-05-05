@@ -5,7 +5,7 @@ public enum CollectionChange<T> {
     case Remove(Int, T)
     case Insert(Int, T)
     case Composite([CollectionChange])
-    
+
     public func index() -> Int? {
         switch self {
         case .Remove(let index, _): return index
@@ -13,7 +13,7 @@ public enum CollectionChange<T> {
         default: return nil
         }
     }
-    
+
     public func element() -> T? {
         switch self {
         case .Remove(_, let element): return element
@@ -25,9 +25,9 @@ public enum CollectionChange<T> {
 
 
 public final class CollectionVariable<T> {
-    
+
     // MARK: - Attributes
-    
+
     private let _changesSubject: PublishSubject<CollectionChange<T>>
     private let _subject: PublishSubject<[T]>
     private var _lock = NSRecursiveLock()
@@ -45,9 +45,9 @@ public final class CollectionVariable<T> {
         }
     }
 
-    
+
     // MARK: - Init
-    
+
     public init(_ value: [T]) {
         var initialChanges: [CollectionChange<T>] = []
         for (index, element) in value.enumerate() {
@@ -59,10 +59,10 @@ public final class CollectionVariable<T> {
         _subject = PublishSubject()
         _subject.onNext(value)
     }
-    
-    
+
+
     // MARK: - Public
-    
+
     public func removeFirst() {
         if (_value.count == 0) { return }
         _lock.lock()
@@ -71,7 +71,7 @@ public final class CollectionVariable<T> {
         _subject.onNext(_value)
         _lock.unlock()
     }
-    
+
     public func removeLast() {
         _lock.lock()
         if (_value.count == 0) { return }
@@ -81,7 +81,7 @@ public final class CollectionVariable<T> {
         _subject.onNext(_value)
         _lock.unlock()
     }
-    
+
     public func removeAll() {
         _lock.lock()
         let copiedValue = _value
@@ -90,7 +90,7 @@ public final class CollectionVariable<T> {
         _subject.onNext(_value)
         _lock.unlock()
     }
-    
+
     public func removeAtIndex(index: Int) {
         _lock.lock()
         let deletedElement = _value.removeAtIndex(index)
@@ -98,7 +98,7 @@ public final class CollectionVariable<T> {
         _subject.onNext(_value)
         _lock.unlock()
     }
-    
+
     public func append(element: T) {
         _lock.lock()
         _value.append(element)
@@ -106,7 +106,7 @@ public final class CollectionVariable<T> {
         _subject.onNext(_value)
         _lock.unlock()
     }
-    
+
     public func appendContentsOf(elements: [T]) {
         _lock.lock()
         let count = _value.count
@@ -115,7 +115,7 @@ public final class CollectionVariable<T> {
         _subject.onNext(_value)
         _lock.unlock()
     }
-    
+
     public func insert(newElement: T, atIndex index: Int) {
         _lock.lock()
         _value.insert(newElement, atIndex: index)
@@ -123,13 +123,13 @@ public final class CollectionVariable<T> {
         _subject.onNext(_value)
         _lock.unlock()
     }
-    
+
     public func replace(subRange: Range<Int>, with elements: [T]) {
         _lock.lock()
         precondition(subRange.startIndex + subRange.count <= _value.count, "Range out of bounds")
-        
+
         var compositeChanges: [CollectionChange<T>] = []
-        
+
         for (index, element) in elements.enumerate() {
             let replacedElement = _value[subRange.startIndex+index]
             let range = subRange.startIndex+index..<subRange.startIndex+index+1
@@ -141,16 +141,16 @@ public final class CollectionVariable<T> {
         _subject.onNext(_value)
         _lock.unlock()
     }
-    
+
     deinit {
         _subject.onCompleted()
         _changesSubject.onCompleted()
     }
-    
+
 }
 
 extension Array {
-    
+
     func mapWithIndex<T>(transform: (Int, Element) -> T) -> [T] {
         var newValues: [T] = []
         for (index, element) in self.enumerate() {
@@ -158,5 +158,5 @@ extension Array {
         }
         return newValues
     }
-    
+
 }

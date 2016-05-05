@@ -2,6 +2,7 @@
 
 ### Carthage ###
 # Carthage - A simple, decentralized dependency manager for Cocoa
+Carthage/
 Carthage.checkout
 Carthage.build
 
