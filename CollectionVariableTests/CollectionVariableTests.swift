@@ -390,6 +390,7 @@ class CollectionVariableTests: QuickSpec {
                                     let elements = changes.map({$0.element()!})
                                     expect(indexes) == [0, 0, 1, 1]
                                     expect(elements) == ["test1", "test3", "test2", "test4"]
+                                    done()
                                 default: break
                                 }
                             default: break
