@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "CollectionVariable"
-  s.version          = "0.0.2"
+  s.version          = "0.0.3"
   s.summary          = "CollectionVariable for RxSwift"
   s.homepage         = "https://github.com/gitdoapp/CollectionVariable"
   s.license          = 'MIT'
@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'CollectionVariable/**/*.swift'
-  s.dependency 'RxSwift', '~> 3.0.0'
+  s.dependency 'RxSwift', '~> 3.4.0'
 end
