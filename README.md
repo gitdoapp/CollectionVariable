@@ -6,11 +6,11 @@ Implementation of the concept of CollectionVariable for RxSwift
 *Implemented by [@pepibumur](https://github.com/pepibumur)*
 
 ### Features
-- Swift 2.0
+- Swift 3.0
 - Granularity reporting collection changes (custom events)
 - It exposes Swift Array collection methods
 - NSFetchedResultsController inspired
-- RxSwift 2.1.X
+- RxSwift 3.0.X
 
 ## How to install
 1. Get [Carthage](https://github.com/Carthage/Carthage), `brew update carthage`
@@ -34,9 +34,9 @@ variable.observable.subscribeNext { newCollection in
 }
 variable.changesObservable.subscribeNext { change in
   switch change {
-    case Remove(Int, T)
-    case Insert(Int, T)
-    case Composite([CollectionChange])
+    case remove(Int, T)
+    case insert(Int, T)
+    case composite([CollectionChange])
   }
 }
 ```
