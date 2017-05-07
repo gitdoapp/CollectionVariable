@@ -195,9 +195,11 @@
 				TargetAttributes = {
 					23AE4B241BCE5CF100D1082B = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0830;
 					};
 					23AE4B2E1BCE5CF100D1082B = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -373,6 +375,7 @@
 				PRODUCT_NAME = CollectionVariable;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -395,6 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.CollectionVariable;
 				PRODUCT_NAME = CollectionVariable;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -409,6 +413,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.CollectionVariableTests;
 				PRODUCT_NAME = CollectionVariableTests;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -423,6 +428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gitdo.CollectionVariableTests;
 				PRODUCT_NAME = CollectionVariableTests;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

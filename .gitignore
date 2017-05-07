@@ -197,3 +197,5 @@ xcuserdata
 
 ### Objective-C Patch ###
 *.xcscmblueprint
+
+Carthage

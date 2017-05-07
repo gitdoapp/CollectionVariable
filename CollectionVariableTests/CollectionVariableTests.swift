@@ -28,7 +28,7 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.observable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(_):
+                            case .next(_):
                                 done()
                             default: break
                             }
@@ -45,9 +45,9 @@ class CollectionVariableTests: QuickSpec {
                         (done) -> Void in
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 switch change {
-                                case .Composite(let changes):
+                                case .composite(let changes):
                                     let indexes = changes.map({$0.index()!})
                                     let elements = changes.map({$0.element()!})
                                     expect(indexes) == [0, 1]
@@ -76,7 +76,7 @@ class CollectionVariableTests: QuickSpec {
                         (done) -> Void in
                         _ = variable.observable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let newValue):
+                            case .next(let newValue):
                                 expect(newValue) == ["test1"]
                                 done()
                             default: break
@@ -93,9 +93,9 @@ class CollectionVariableTests: QuickSpec {
                         (done) -> Void in
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 switch change {
-                                case .Remove(let index, let element):
+                                case .remove(let index, let element):
                                     expect(index) == 1
                                     expect(element) == "test2"
                                     done()
@@ -117,7 +117,7 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.observable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 expect(change) == ["test1"]
                                 done()
                             default: break
@@ -133,9 +133,9 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 switch change {
-                                case .Remove(let index, let element):
+                                case .remove(let index, let element):
                                     expect(index) == 1
                                     expect(element) == "test2"
                                     done()
@@ -157,7 +157,7 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.observable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 expect(change) == ["test2"]
                                 done()
                             default: break
@@ -173,9 +173,9 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 switch change {
-                                case .Remove(let index, let element):
+                                case .remove(let index, let element):
                                     expect(index) == 0
                                     expect(element) == "test1"
                                     done()
@@ -196,7 +196,7 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.observable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 expect(change) == []
                                 done()
                             default: break
@@ -212,9 +212,9 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 switch change {
-                                case .Composite(let changes):
+                                case .composite(let changes):
                                     let indexes = changes.map({$0.index()!})
                                     let elements = changes.map({$0.element()!})
                                     expect(indexes) == [0, 1]
@@ -242,7 +242,7 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.observable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let next):
+                            case .next(let next):
                                 expect(next) == ["test1", "test2", "test3"]
                                 done()
                             default: break
@@ -258,9 +258,9 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 switch change {
-                                case .Insert(let index, let element):
+                                case .insert(let index, let element):
                                     expect(index) == 2
                                     expect(element) == "test3"
                                     done()
@@ -283,7 +283,7 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.observable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let next):
+                            case .next(let next):
                                 expect(next) == ["test1", "test2", "test3", "test4"]
                                 done()
                             default: break
@@ -299,9 +299,9 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 switch change {
-                                case .Composite(let changes):
+                                case .composite(let changes):
                                     let indexes = changes.map({$0.index()!})
                                     let elements = changes.map({$0.element()!})
                                     expect(indexes) == [2, 3]
@@ -326,7 +326,7 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.observable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let next):
+                            case .next(let next):
                                 expect(next) == ["test0", "test1", "test2"]
                                 done()
                             default: break
@@ -342,9 +342,9 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 switch change {
-                                case .Insert(let index, let element):
+                                case .insert(let index, let element):
                                     expect(index) == 0
                                     expect(element) == "test0"
                                     done()
@@ -367,13 +367,13 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.observable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let next):
+                            case .next(let next):
                                 expect(next) == ["test3", "test4"]
                                 done()
                             default: break
                             }
                         })
-                        variable.replace(Range<Int>(start: 0, end: 1), with: ["test3", "test4"])
+                        variable.replace(0..<1, with: ["test3", "test4"])
                     })
                 })
                 
@@ -383,19 +383,21 @@ class CollectionVariableTests: QuickSpec {
                     waitUntil(action: { (done) -> Void in
                         _ = variable.changesObservable.subscribe({ (event) -> Void in
                             switch event {
-                            case .Next(let change):
+                            case .next(let change):
                                 switch change {
-                                case .Composite(let changes):
+                                case .composite(let changes):
                                     let indexes = changes.map({$0.index()!})
                                     let elements = changes.map({$0.element()!})
                                     expect(indexes) == [0, 0, 1, 1]
                                     expect(elements) == ["test1", "test3", "test2", "test4"]
+                                    done()
                                 default: break
                                 }
                             default: break
                             }
                         })
-                        variable.replace(Range<Int>(start: 0, end: 1), with: ["test3", "test4"])
+                        variable.replace(0..<1, with: ["test3", "test4"])
+
                     })
                     
                 })
